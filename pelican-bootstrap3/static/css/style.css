@@ -83,6 +83,10 @@ a, a:hover {
     border-bottom: 1px dotted;
 }
 
+.addthis_toolbox a {
+    border-bottom: none;
+}
+
 .entry-content a:hover {
     text-decoration: none;
     border-bottom: 1px solid;
