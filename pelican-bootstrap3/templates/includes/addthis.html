@@ -1,4 +1,8 @@
-{% if ADDTHIS_PROFILE and addthis_enabled %}
+{% if ADDTHIS_PROFILE and (
+  (addthis_pos=='top' and ADDTHIS_TOP|default(False)) or
+  (addthis_pos=='bottom' and ADDTHIS_BOTTOM|default(True) and (article.content|length > ADDTHIS_LEN|default(0)))
+  )
+%}
     <hr />
     <!-- AddThis Button BEGIN -->
     <div class="addthis_toolbox addthis_default_style">

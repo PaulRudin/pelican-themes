@@ -83,7 +83,7 @@
                 <div class="panel">
                     <div class="panel-body">
                       {% include 'includes/article_info.html' %}
-                      {% with addthis_enabled=ADDTHIS_TOP|default(False) %}
+                      {% with addthis_pos='top' %}
                          {% include 'includes/addthis.html' %}
                       {% endwith %}
                     </div>
@@ -93,7 +93,7 @@
             <!-- /.entry-content -->
             {% include 'includes/related-posts.html' %}
             {% include 'includes/series.html' %}
-            {% with addthis_enabled=ADDTHIS_BOTTOM|default(True) %}
+            {% with addthis_pos='bottom' %}
                 {% include 'includes/addthis.html'  %}
             {% endwith %}
             {% include 'includes/shariff.html' %}
