@@ -42,7 +42,12 @@
         <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
     </section>
-{% elif COMMENTO_SITENAME %}
-    <div id="commento"></div>
-    <script src="https://comments.xamaral.com/js/commento.js"></script>    
+    {% elif COMMENTO_SITENAME %}
+    <hr/>
+    <section class="comments" id="comments">
+      <h2>{{ _('Comments') }}</h2>
+
+      <div id="commento"></div>
+      <script src="https://comments.xamaral.com/js/commento.js"></script>    
+    </section>
 {% endif %}
